@@ -3,14 +3,14 @@
 
 void afficherMenu()
 {
-printf("===== GESTION DE NOTES =====\n \
-1. Saisir le nombre d'eleves\n \
-2. Saisir les notes des eleves\n \
-3. Afficher toutes les notes\n \
-4. Afficher la moyenne d'un eleve\n \
-5. Afficher la moyenne general\n \
-6. Afficher la meilleure note de chaque controle\n \
-0. Quittez\n");
+    printf("\n===== GESTION DE NOTES =====\n");
+    printf("1. Saisir le nombre d'eleves\n");
+    printf("2. Saisir les notes des eleves\n");
+    printf("3. Afficher toutes les notes\n");
+    printf("4. Afficher la moyenne d'un eleve\n");
+    printf("5. Afficher la moyenne generale\n");
+    printf("6. Afficher la meilleure note de chaque controle\n");
+    printf("0. Quitter\n");
 }
 
 int lireChoix()
@@ -23,12 +23,12 @@ int lireChoix()
 int saisirNombreEleve()
 {
     int nb_eleves;
-    printf("Choississez un nombre d'eleves entre 1 et 30 inclus");
+    printf("Choississez un nombre d'eleves entre 1 et 30 inclus\n");
     scanf("%d",&nb_eleves);
     while (nb_eleves< 1 || nb_eleves >30)
     {
         printf("Nombre invalide\n \
-Choississez un nombre d'eleves entre 1 et 30 inclus");
+Choississez un nombre d'eleves entre 1 et 30 inclus\n");
         scanf("%d",&nb_eleves);
     }
     return nb_eleves;
@@ -37,7 +37,7 @@ Choississez un nombre d'eleves entre 1 et 30 inclus");
 void saisirNotes(int eleves,  int tabNote[30][3])
 {
   
-    printf("Saisir des notes pour %d eleves et 3 controles", eleves);
+    printf("Saisir des notes pour %d eleves et 3 controles\n", eleves);
     for (int i = 0; i < eleves; i++)
     {
         printf("Eleve %d :\n",i+1);
@@ -47,7 +47,7 @@ void saisirNotes(int eleves,  int tabNote[30][3])
             scanf("%d",&tabNote[i][j]);
             while (tabNote[i][j] < 0 || tabNote[i][j] >20)
             {
-                printf("Entrez une note valide",j);
+                printf("Entrez une note valide\n",j);
                 scanf("%d",&tabNote[i][j]);
             }
             
