@@ -7,7 +7,7 @@ printf("===== GESTION DE NOTES =====\n \
 1. Saisir le nombre d'eleves\n \
 2. Saisir les notes des eleves\n \
 3. Afficher toutes les notes\n \
-4. Afficherb la moyenne d'un eleve\n \
+4. Afficher la moyenne d'un eleve\n \
 5. Afficher la moyenne general\n \
 6. Afficher la meilleure note de chaque controle\n \
 0. Quittez\n");
@@ -68,4 +68,16 @@ void afficherNotes(int tabNotes[30][3],int nb_eleves)
         printf("%d     %d  %d  %d\n",i+1,tabNotes[i][0],tabNotes[i][1],tabNotes[i][2]);
     }
     
+}
+
+float calculerMoyenneEleve(int tabNotes[30][3],int numeroEleve)
+{
+    float total = 0;
+    
+    for (int i = 0; i < 3; i++)
+    {
+    total += tabNotes[numeroEleve][i];
+    }
+    float moyenne = total/3;
+    return moyenne ;
 }
