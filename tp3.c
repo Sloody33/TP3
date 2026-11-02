@@ -3,10 +3,12 @@
 
 int main()
 {
-
+/*
 afficherMenu();
 
 int choix = lireChoix();
+*/
 
+saisirNotes(2);
 return 0;
 }

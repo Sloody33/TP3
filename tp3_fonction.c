@@ -33,3 +33,28 @@ Choississez un nombre d'eleves entre 1 et 30 inclus");
     }
     return nb_eleves;
 }
+
+void saisirNotes(int eleves)
+{
+    int tabNote[30][3];
+    printf("Saisir des notes pour %d eleves et 3 controles", eleves);
+    for (int i = 1; i < eleves+1; i++)
+    {
+        printf("Eleve %d :\n",i);
+        for (int j = 1; j < 4; j++)
+        {
+            printf("Entrez la note %d :\n",j);
+            scanf("%d",&tabNote[i][j]);
+            while (tabNote[i][j] < 0 || tabNote[i][j] >20)
+            {
+                printf("Entrez une note valide",j);
+                scanf("%d",&tabNote[i][j]);
+            }
+            
+            
+        }
+        
+
+    }
+    
+}
