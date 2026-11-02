@@ -38,10 +38,10 @@ void saisirNotes(int eleves,  int tabNote[30][3])
 {
   
     printf("Saisir des notes pour %d eleves et 3 controles", eleves);
-    for (int i = 1; i < eleves+1; i++)
+    for (int i = 0; i < eleves; i++)
     {
         printf("Eleve %d :\n",i);
-        for (int j = 1; j < 4; j++)
+        for (int j = 0; j < 3; j++)
         {
             printf("Entrez la note %d :\n",j);
             scanf("%d",&tabNote[i][j]);
@@ -55,6 +55,17 @@ void saisirNotes(int eleves,  int tabNote[30][3])
         }
         
 
+    }
+    
+}
+
+void afficherNotes(int tabNotes[30][3],int nb_eleves)
+{
+    printf("Tableau de note :\n");
+    printf("Eleve C1 C2 C3\n");
+    for (int i = 0; i < nb_eleves; i++)
+    {
+        printf("%d     %d  %d  %d\n",i+1,tabNotes[i][0],tabNotes[i][1],tabNotes[i][2]);
     }
     
 }
