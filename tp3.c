@@ -13,5 +13,10 @@ int choix = lireChoix();
 
 saisirNotes(2,tabNotes);
 afficherNotes(tabNotes,nb_eleves);
+
+
+//printf("%d",trouverMeilleureNoteControle(tabNotes,3,2));
+
+//printf("%.2f",calculerMoyenneGenerale(tabNotes,2));
 return 0;
 }

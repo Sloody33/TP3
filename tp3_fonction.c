@@ -40,10 +40,10 @@ void saisirNotes(int eleves,  int tabNote[30][3])
     printf("Saisir des notes pour %d eleves et 3 controles", eleves);
     for (int i = 0; i < eleves; i++)
     {
-        printf("Eleve %d :\n",i);
+        printf("Eleve %d :\n",i+1);
         for (int j = 0; j < 3; j++)
         {
-            printf("Entrez la note %d :\n",j);
+            printf("Entrez la note %d :\n",j+1);
             scanf("%d",&tabNote[i][j]);
             while (tabNote[i][j] < 0 || tabNote[i][j] >20)
             {
@@ -88,8 +88,22 @@ float calculerMoyenneGenerale(int tabNotes[30][3],int nb_eleves)
     for (int i = 0; i < nb_eleves; i++)
     
     {
-        total += calculerMoyenneEleve(tabNotes[30][3],i);
+        total += calculerMoyenneEleve(tabNotes,i);
     }
     float moyenneG = total / nb_eleves;
     return moyenneG;
+}
+
+int trouverMeilleureNoteControle(int tabNotes[30][3],int numeroControle,int nb_eleves)
+{
+    int max = 0;
+    for (int i = 0; i < nb_eleves; i++)
+    {
+        if (tabNotes[i][numeroControle-1]>max)
+        {
+            max = tabNotes[i][numeroControle-1];
+        }
+        
+    }
+    return max;
 }
