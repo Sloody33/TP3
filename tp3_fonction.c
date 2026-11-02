@@ -81,3 +81,15 @@ float calculerMoyenneEleve(int tabNotes[30][3],int numeroEleve)
     float moyenne = total/3;
     return moyenne ;
 }
+
+float calculerMoyenneGenerale(int tabNotes[30][3],int nb_eleves)
+{
+    float total = 0;
+    for (int i = 0; i < nb_eleves; i++)
+    
+    {
+        total += calculerMoyenneEleve(tabNotes[30][3],i);
+    }
+    float moyenneG = total / nb_eleves;
+    return moyenneG;
+}
