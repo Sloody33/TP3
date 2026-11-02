@@ -16,20 +16,21 @@ int main()
         switch (choix)
         {
             case 1:
+            {
+                int montant = saisir_montant();
+
+                if (montant_valide(montant))
                 {
-                    int montant = saisir_montant();
-
-                    if (montant_valide(montant))
-                    {
-                        printf("Montant valide !\n");
-                    }
-                    else
-                    {
-                        printf("Montant invalide !\n");
-                    }
-
-                    break;
+                    printf("Montant valide !\n");
+                    calcul_distribution(montant);
                 }
+                else
+                {
+                    printf("Montant invalide !\n");
+                }
+
+                break;
+}
 
             case 2:
                 printf("Au revoir !\n");
