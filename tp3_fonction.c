@@ -107,3 +107,11 @@ int trouverMeilleureNoteControle(int tabNotes[30][3],int numeroControle,int nb_e
     }
     return max;
 }
+
+void afficherMeilleuresNotes(int tabNotes[30][3], int nb_eleves)
+{
+    for (int i = 1; i <= 3; i++)
+    {
+        printf("Meilleure note au controle %d : %d\n",i, trouverMeilleureNoteControle(tabNotes, i, nb_eleves));
+    }
+}
