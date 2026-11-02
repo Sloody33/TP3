@@ -3,7 +3,6 @@
 
 void afficherMenu()
 {
-//affichage du tableau
 printf("===== GESTION DE NOTES =====\n \
 1. Saisir le nombre d'eleves\n \
 2. Saisir les notes des eleves\n \
@@ -14,7 +13,8 @@ printf("===== GESTION DE NOTES =====\n \
 0. Quittez\n");
 }
 
-int lireChoix(){
+int lireChoix()
+{
     int choix;
     scanf("%d",&choix);
     return choix;
