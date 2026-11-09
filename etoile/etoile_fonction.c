@@ -17,18 +17,18 @@ return n;
 }
 
 
-void imgVide(int width, int max_height, char img[width][max_height])
+void imgVide(int width, int max_height, char img[max_height][width])
 {
     for (int i = 0; i < max_height; i++)
     {
         for (int j = 0; j < width; j++)
         {
-            img[i][j] = 'a';
+            img[i][j] = '_';
         }
     }
 }
 
-void afficher(int width, int max_height, char img[width][max_height]){
+void afficher(int width, int max_height, char img[max_height][width]){
     for (int i = 0; i < max_height; i++)
     {
         for (int j = 0; j < width; j++)
@@ -36,5 +36,25 @@ void afficher(int width, int max_height, char img[width][max_height]){
             printf("%c", img[i][j]);
         }
         printf("\n");
+    }
+}
+
+void dessinerPointe(int width, int max_height, int n, char img[max_height][width])
+{
+    int mid = width / 2;
+
+    for (int i = 0; i < n; i++)
+    {
+        int gauche = mid - i;
+        int droite = mid + i;
+
+        for (int j = 0; j < width; j++)
+        {
+            if (j == gauche || j == droite)
+                img[i][j] = 'A';
+
+            else if (j > gauche && j < droite)
+                img[i][j] = 'S';
+        }
     }
 }
