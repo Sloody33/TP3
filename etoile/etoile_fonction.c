@@ -44,3 +44,15 @@ void imgVide(int width, int max_height, char img[width][max_height])
         }
     }
 }
+
+void afficher(int width, int max_height, char img[width][max_height]){
+     for (int i = 0; i < width; i++)
+    {
+        for (int j = 0; j < max_height; j++)
+        {
+            printf("%c",img[i][j]);
+        }
+
+        printf("\n");
+    }
+}
