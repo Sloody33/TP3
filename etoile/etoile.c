@@ -12,7 +12,9 @@ while (n<5 || n>10)
     scanf("%d",&n);
 }
 
-
+int width = n * n;
+int max_height = 3*n -1;
+char img[width][max_height];
 
     return 0;
 }
